@@ -60,7 +60,7 @@ I built this as part of The Odin Project's Ruby on Rails curriculum, focusing on
 - **ActiveRecord** - ORM and associations
 - **ERB** - View templating
 - **CSS** - Styling
--**Rubocop** - Linting 
+- **Rubocop** - Linting 
 ---
 
 ## Installation
