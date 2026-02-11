@@ -20,7 +20,7 @@ A private event management application built with Ruby on Rails that allows user
 
 ## Overview
 
-This project was my introduction to complex ActiveRecord associations in Rails. The main challenge was modeling many-to-many relationships properly - specifically, handling the relationship between users and events where a user can create events AND attend events created by others.
+This project was the introduction to ActiveRecord associations in Rails. Modeling many-to-many relationships -  handling the relationship between users and events where a user can create events AND attend events created by others.
 
 I built this as part of The Odin Project's Ruby on Rails curriculum, focusing on associations, foreign keys, and database design.
 
