@@ -45,11 +45,6 @@ I built this as part of The Odin Project's Ruby on Rails curriculum, focusing on
 - Remove yourself from events you're attending
 - Track past and upcoming events separately
 
-### Privacy Controls
-- Events can be public or private
-- Private events are invite-only
-- Event creators can invite specific users
-
 ### Navigation
 - Clean navigation across all pages
 - Easy access to your created events and attended events
