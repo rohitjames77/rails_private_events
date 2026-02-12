@@ -1,0 +1,10 @@
+    <p><%= link_to "Go back", root_path%></p>
+
+<h2>List of your Event's Attendee </h2>
+
+
+<% @attendees.each do |attendee| %>
+   <p>User Who is going to attend you event has Id of :- <%= attendee.id %></p> 
+
+     <% end  %>
+      

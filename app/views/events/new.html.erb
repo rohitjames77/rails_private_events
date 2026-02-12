@@ -1,0 +1,36 @@
+
+  <h1>Create Event</h1>
+
+<%= form_with model: @event, local: true do |f| %>
+
+  <div>
+    <%= f.label :event_name %><br>
+    <%= f.text_field :event_name %>
+  </div>
+
+  <div>
+    <%= f.label :date_of_event %><br>
+    <%= f.date_field :date_of_event %>
+  </div>
+
+  <div>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+
+  <div>
+    <%= f.label :no_of_attendence %><br>
+    <%= f.number_field :no_of_attendence %>
+  </div>
+
+  <div>
+    <%= f.label :ticket_price %><br>
+    <%= f.number_field :ticket_price %>
+  </div>
+
+  <div>
+    <%= f.submit "Create Event" %>
+  </div>
+
+<% end %>
+

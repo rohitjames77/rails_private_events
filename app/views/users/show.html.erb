@@ -1,0 +1,30 @@
+<%= link_to "Go back", root_path %>
+<h2>List of Events you are going attend. </h2>
+<% @attended_events.each do |attended_event| %>
+<p>Id of the event you are going to attend :- <%= attended_event.id %>
+<p>Location of the event you are going to attend :- <%= attended_event.location %>
+<p>Date of the event you are going to attend :- <%= attended_event.date_of_event %>
+
+<% end %>
+
+<div style="border:1px solid #ccc; padding:12px; margin-bottom:10px;">
+  <h2>Past Events</h2>
+  <% @attended_events.each do |attended_event| %>
+    <% if attended_event.date_of_event < Date.current %>
+      <p>Id of the event you are going to attend :- <%= attended_event.id %></p>
+      <p>Location of the event you are going to attend :- <%= attended_event.location %></p>
+      <p>Date of the event you are going to attend :- <%= attended_event.date_of_event %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<div style="border:1px solid #ccc; padding:12px; margin-bottom:10px;">
+  <h2>Upcoming Events</h2>
+  <% @attended_events.each do |attended_event| %>
+    <% if attended_event.date_of_event > Date.current %>
+      <p>Id of the event you are going to attend :- <%= attended_event.id %></p>
+      <p>Location of the event you are going to attend :- <%= attended_event.location %></p>
+      <p>Date of the event you are going to attend :- <%= attended_event.date_of_event %></p>
+    <% end %>
+  <% end %>
+</div>

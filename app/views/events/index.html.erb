@@ -1,0 +1,35 @@
+
+
+<% if user_signed_in? %>
+<div>
+
+<h2>Lets create an event</h2>
+<p><%= link_to "Click here to create an Event", new_event_path%> </p>
+
+<p><%= link_to "Your attended events", user_path(current_user) %> </p>
+
+
+
+<h1>Upcoming Events....</h1>
+
+<% if @events.any? %>
+  <% @events.each do |event| %>
+    <div class="event-card" style="border:1px solid #ccc; padding:12px; margin-bottom:10px;">
+      <h3><%= link_to event.event_name, event_path(event) %></h3>
+<p>EVENT ID: <%= event.id %></p>
+      <p>
+        <strong>Date:</strong> <%= event.date_of_event %><br>
+        <strong>Location:</strong> <%= event.location %>
+      </p>
+      <%= button_to "Attend this event",
+              event_attendances_path(event_id:event.id),
+              method: :post %>
+    </div>
+  <% end %>
+<% else %>
+  <p>You have no events yet.</p>
+  
+  <% end %>
+<p><%= link_to "Go back", new_event_path%></p>
+</div>
+<% end %>
