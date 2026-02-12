@@ -60,7 +60,9 @@ I built this as part of The Odin Project's Ruby on Rails curriculum, focusing on
 - **ActiveRecord** - ORM and associations
 - **ERB** - View templating
 - **CSS** - Styling
-- **Rubocop** - Linting 
+- **Rubocop** - Linting
+
+   
 ---
 
 ## Installation
@@ -116,7 +118,7 @@ This schema allows users to both create events and attend events created by othe
 The hardest part wasn't just that users and events have a many-to-many relationship - it was that users interact with events in TWO different ways: as creators and as attendees. Carefully naming my associations and specifying foreign keys to avoid confusion.
 
 ### Building the Attendance Interface
-Creating a clean way for users to attend/leave events required:
+Creating a clean way for users to attend/leave events required
 - A separate EventAttendancesController
 - Proper routing for creating and destroying attendances
 - View logic to show "Attend" or "Leave" buttons based on current state
