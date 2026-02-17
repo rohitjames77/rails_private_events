@@ -23,32 +23,25 @@
 
    <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-<% if user_signed_in? %>
-  <%= button_to "Logout",
-        destroy_user_session_path,
-        method: :delete %>
-<% else %>
-  <p>
-    Please
-    <%= link_to "Sign In", new_user_session_path %>
-    or
-    <%= link_to "Sign Up", new_user_registration_path %>
-    to continue...
-  </p>
-<% end %>
-<% if !user_signed_in? %>
-<h1>Welcome</h1>
-<h2>Create Events App</h2>
-
-<% end %>
-
-
-
-
-
-
+       <% if user_signed_in? %>
+          <%= button_to "Logout",
+          destroy_user_session_path,
+          method: :delete %>
+      <% else %>
+        <p>
+          Please
+          <%= link_to "Sign In", new_user_session_path %>
+          or
+          <%= link_to "Sign Up", new_user_registration_path %>
+          to continue...
+        </p>
+      <% end %>
+      <% if !user_signed_in? %>
+        <h1>Welcome</h1>
+        <h2>Create Events App</h2>
+      <% end %>
 
     <%= yield %>
 
-    </body>
+  </body>
 </html>
